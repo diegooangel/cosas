@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(49, 87, 88);
+            color: bisque;
+            text-align: center;
+        }
+        div{
+            background-color: rgb(66, 104, 105);
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+    </style>
+    <title>CONTADOR 2</title>
+</head>
+<body>
+    <h1>Contador 2</h1>
+    <div id="div">
+    </div>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="reiniciar()">Reiniciar</button>
+    <button onclick="disminuir()">Disminuir</button>
+    <script>
+        console.log('Contador 2 UwU');
+
+        let numero = 0;
+        const $div = document.getElementById('div');
+        $div.innerHTML = `
+        <h2>${numero}</h2>
+        `
+        const aumentar = () => {
+            numero++
+            $div.innerHTML = `
+            <h2>${numero}</h2>
+            `
+        }
+        const reiniciar = () => {
+            numero = 0;
+            $div.innerHTML = `
+            <h2>${numero}</h2>
+            `
+        }
+        const disminuir = () => {
+            numero--
+            $div.innerHTML = `
+            <h2>${numero}</h2>
+            `
+        }
+    </script>
+</body>
+</html>
